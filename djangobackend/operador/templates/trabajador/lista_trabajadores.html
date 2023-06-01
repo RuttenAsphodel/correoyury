@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block titulo %} Gestionar Empleados {% endblock %}
+{% block contenedor %}
+
+<div class="container">
+  <a name="" id="" class="btn btn-primary" href="{% url 'agregar_trabajador' %}" role="button">Agregar Empleado</a>
+  <hr>
+</div>
+
+<div class="container">
+  <h1>Lista de Trabajadores</h1>
+</div>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Rut</th>
+        <th>Sexo</th>
+        <th>Direccion</th>
+        <th>Fecha Ingreso</th>
+        <th>Area</th>
+        <th>Departamento</th>
+        <th>Cargo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for trabajador in trabajadores %}
+        <tr>
+          <td>{{ trabajador.nombre_trabajador }}</td>
+          <td>{{ trabajador.rut_trabajador }}</td>
+          <td>{{ trabajador.sexo }}</td>
+          <td>{{ trabajador.direccion_trabajador }}</td>
+          <td>{{ trabajador.fecha_ingreso }}</td>
+          <td>{{ trabajador.id_area }}</td>
+          <td>{{ trabajador.id_departamento }}</td>
+          <td>{{ trabajador.id_cargo }}</td>
+          <td class="table-responsive"> 
+            <a name="" id="" class="btn btn-info" href="#" role="button">Editar</a>
+            <a name="" id="" class="btn btn-danger" href="#" role="button">Eliminar</a>
+        </td> 
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+</div> 
+
+
+
+{% endblock %}

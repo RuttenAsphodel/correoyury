@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block titulo %} Gestionar Areas {% endblock %}
+{% block contenedor %}
+
+<div class="container">
+  <a name="" id="" class="btn btn-primary" href="{% url 'agregar_area' %}" role="button">Nueva Area</a>
+  <hr>
+</div>
+
+<div class="container">
+  <h1>Areas</h1>
+</div>
+<div class="container">
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Area</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for area in areas %}
+            <tr>
+
+                <td class="table-responsive">{{ area.nombre_area }}</td> 
+                <td class="table-responsive"> 
+                    <a name="" id="" class="btn btn-info" href="#" role="button">Editar</a>
+                    <a name="" id="" class="btn btn-danger" href="#" role="button">Eliminar</a>
+                </td> 
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+  
+</div> 
+
+
+
+{% endblock %}

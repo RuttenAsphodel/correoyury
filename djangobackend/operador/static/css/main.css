@@ -1,0 +1,496 @@
+*
+{
+    box-sizing: border-box;
+}
+
+html
+{
+    scroll-behavior: smooth;
+    background: rgb(157, 157, 159);
+
+}
+
+body
+{
+    margin:0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cabecera
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    justify-content: space-evenly;
+    align-content: space-around;
+    width: 100%;
+    background: rgb(41, 32, 94);
+    color:white;
+    position: fixed;
+}
+
+
+.header
+{
+    width: 70%;
+    padding: 5px;
+    background-color: cyan;
+    color: black;
+    font-size: 25px;
+
+}
+
+.nav-menu
+{
+    width:100%;
+    padding: 5px;
+}
+
+.nav-list
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-around;
+    padding: 5px;
+    font-size: 25px;
+    list-style-type: none;
+}
+
+.nav-list a
+{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-menu a:hover 
+{
+    border-bottom: 3px solid cyan;
+}
+
+.menu-on
+{
+    display: none;
+}
+
+
+
+.menu-off
+{
+    display: none;
+}
+
+
+.cards
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1,1fr);
+    padding: 30px;
+    width:100%;
+}
+
+
+.info img
+{
+    margin-top: 4%;
+    width: 100%;
+    height: 100%;
+}
+
+
+.info
+{
+    font-size:  60px;
+    background-image: linear-gradient(
+                    rgba(0,0, 0, 0.5),
+                    rgba(0, 1, 1, 0.668)), 
+                    url("../img/bg-support.jpg");
+    background-size: cover;
+    color: aliceblue;
+    padding: 20px;
+    
+}
+
+.nosotros
+{
+    background: cyan;
+}
+
+
+.nosotros .cards
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-content: space-around;
+    padding: 30px;
+    font-size: 40px;
+    gap:10px;
+    color: black;
+    width: 80%;
+    text-align: justify;
+} 
+
+.nosotros .cards .card img 
+{
+    height: 100%;
+    width: 200%;
+    padding-left: 20px;
+}
+
+.servicios
+{
+    background: white;
+    padding: 50px;
+    width: 100%;
+    color:black;
+}
+
+.servicios h2
+{
+    text-align: center;
+    font-size: 60px;
+}
+
+.servicios .cards
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    gap: 5px;
+    padding: 20px;
+}
+
+.servicios .cards .card
+{
+    padding: 25px;
+    width: 100%;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.servicios .cards .card h4
+{
+    text-align: center;
+    font-size: 30px;;
+}
+
+.servicios .cards .card img
+{
+    height: 60%;
+    width: 100%; 
+}
+
+.servicios .cards .card button
+{
+    margin-left: 10%;
+    width: 80%;
+    color: black;
+    background: white;
+    padding:10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    border-radius: 20px;
+    border:1px solid black;
+    cursor: pointer;
+}
+
+.izq
+{
+    background: cyan;
+    color: black;
+}
+
+.cent
+{
+    background: rgb(41, 32, 94);
+    color: aliceblue;
+}
+
+.der 
+{
+    background: cyan;
+    color: black;
+}
+
+
+.contacto
+{
+    color: white;
+    background: rgb(41, 32, 94);
+    width:100%;
+}
+
+.contacto .cards
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-around;
+    padding: 5px;
+    width: 100%;
+}
+
+.cont-izq
+{
+    width:100%;
+}
+
+.cont-izq img
+{
+    height:90%;
+    width:100%;
+}
+
+.cont-der
+{
+    width:100%;
+    padding:50px;
+}
+
+.contacto-form input, 
+.contacto-form textarea
+
+{
+    margin-top: 5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    resize: none;
+    width: 80%;
+    padding: 30px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid cyan;
+    color:aliceblue
+}
+
+.contacto-form button
+{
+    margin-top: 10%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    background: cyan;
+    color:black;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1024px) 
+{
+    .cabecera
+    {
+        display:flex;
+        flex-direction: column;
+        margin-top: 0;
+        background: rgb(41, 32, 94);
+        color:white;
+        position: fixed;
+        text-align: center;
+    }
+
+    .header
+    {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .menu-on
+    {
+        display: inline-block;
+        text-align: center;
+        font-size: 30px;
+        padding:0;
+        cursor: pointer;
+    }
+
+    .menu-on a
+    {
+        color: white;
+        text-decoration: none;
+    }
+
+    .menu-off
+    {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .menu-off a
+    {
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-menu
+    {
+        display: none;
+    }
+
+
+    .nav-list
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-between;
+        padding: 5px;
+        font-size: 25px;
+        list-style-type: none;
+        text-align: center;
+        height: 100%;
+    }
+    
+    .cards
+    {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1,1fr);
+        padding: 30px;
+        width:100%;
+    }
+
+    .info
+    {
+        font-size:  30px;
+        background-image: linear-gradient(
+                        rgba(0,0, 0, 0.5),
+                        rgba(0, 1, 1, 0.668)), 
+                        url("../img/bg-support.jpg");
+        background-size: cover;
+        color: aliceblue;
+        padding: 20px;
+        
+    }
+
+    .nosotros .cards
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-content: center;
+        padding: 20px;
+        font-size: 20px;
+        gap:10px;
+        color: black;
+        width: 80%;
+        text-align: justify;
+    } 
+
+    .nosotros h3
+    {
+        text-align: center;
+    }
+
+    .nosotros .cards .card img 
+    {
+        height: 100%;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .servicios
+    {
+        background: white;
+        padding: 5px;
+        width: 100%;
+        color:black;
+    }
+    
+    .servicios h2
+    {
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    .servicios .cards
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        gap: 5px;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .servicios .cards .card
+    {
+        padding: 5px;
+        width: 100%;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .servicios .cards .card img
+    {
+       display: none;
+    }
+
+    .contacto .cards
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding: 5px;
+        width: 100%;
+    }
+
+    .servicios .cards .card button
+    {
+        margin-left: 10%;
+        width: 80%;
+        color: black;
+        background: white;
+        padding:10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        border-radius: 20px;
+        border:1px solid black;
+        cursor: pointer;
+    }
+    .cont-izq img
+    {
+        display: none;
+    }
+
+    .contacto-form input, 
+    .contacto-form textarea
+
+    {
+        margin-top: 5%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+        resize: none;
+        width: 80%;
+        padding: 30px;
+        background: none;
+        border: none;
+        border-bottom: 1px solid cyan;
+        color:aliceblue
+    }
+
+    .contacto-form button
+    {
+        margin-top: 10%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        width: 80%;
+        padding: 10px;
+        border-radius: 20px;
+        background: cyan;
+        color:black;
+        cursor: pointer;
+    }
+}

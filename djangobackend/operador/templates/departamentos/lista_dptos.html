@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block titulo %} Gestionar Departamento {% endblock %}
+{% block contenedor %}
+
+<div class="container">
+  <a name="" id="" class="btn btn-primary" href="{% url 'agregar_dpto' %}" role="button">Nuevo Departamento</a>
+  <hr>
+</div>
+
+<div class="container">
+  <h1>Departamentos</h1>
+</div>
+<div class="container">
+
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Departamento</th>
+          <th>Area</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for departamento in departamentos %}
+          <tr>
+  
+              <td class="table-group">{{ departamento.nombre_departamento }}</td>    
+              <td class="table-group">{{ departamento.area }}</td>    
+              <td class="table-responsive"> 
+                <a name="" id="" class="btn btn-info" href="#" role="button">Editar</a>
+                <a name="" id="" class="btn btn-danger" href="#" role="button">Eliminar</a>
+            </td>          
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  
+</div> 
+
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block titulo %} Agregar Empleados {% endblock %}
+{% block contenedor %}
+
+    <h1>Agregar Trabajador</h1>
+
+    <div class="container">
+      <form class="form" method="POST">
+        <div class="mb-3 col-2">
+          <div>
+            {% csrf_token %} 
+            {{ form.as_p }}
+          </div>
+        </div>
+       
+        <div class="mb-3 row">
+          <div class="offset-sm-4 col-sm-8">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+  {% endblock %}

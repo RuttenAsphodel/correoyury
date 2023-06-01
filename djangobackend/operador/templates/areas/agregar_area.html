@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block titulo %} Agregar Cargos {% endblock %}
+{% block contenedor %}
+
+    <h1>Agregar Areas</h1>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Agregar</button>
+    </form>
+
+
+  {% endblock %}
